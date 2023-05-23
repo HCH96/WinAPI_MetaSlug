@@ -2,6 +2,7 @@
 #include "Core.h"
 
 #include "TimeMgr.h"
+#include "KeyMgr.h"
 
 Core::Core()
 	: m_hWnd(0)
@@ -46,6 +47,7 @@ int Core::init(HWND _hWnd, POINT _ptResolution)
 
 	// Manager 초기화
 	TimeMgr::GetInst()->init();
+	KeyMgr::GetInst()->init();
 
 	return S_OK;
 }
@@ -56,6 +58,7 @@ void Core::progress()
 	// Manager Update
 	// ==============
 	TimeMgr::GetInst()->update();
+	KeyMgr::GetInst()->update();
 
 	// =========
 	// Rendering
@@ -67,7 +70,7 @@ void Core::progress()
 
 
 	Rectangle(m_memDC, 100, 100, 200, 200);
-	Rectangle(m_memDC, 150, 150, 250, 250);
+	Rectangle(m_memDC, 200, 200, 300, 300);
 	
 	// Back buffer에 있던 그림을 메인 buffer에 그린다.
 	BitBlt(m_hDC, 0, 0, m_ptResolution.x, m_ptResolution.y, m_memDC, 0, 0, SRCCOPY);
