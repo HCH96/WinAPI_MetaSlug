@@ -17,6 +17,12 @@
     <Filter Include="Engine\Core">
       <UniqueIdentifier>{15d9af28-5a08-4b6c-bd74-4805b0fb3c70}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Manager">
+      <UniqueIdentifier>{5ef7e492-92c6-4a1d-a874-41e888eae830}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Manager\TimeMgr">
+      <UniqueIdentifier>{eb4d9e23-3c28-41f4-ae1d-d6b1f558637a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -40,6 +46,9 @@
     <ClInclude Include="define.h">
       <Filter>Engine\Header</Filter>
     </ClInclude>
+    <ClInclude Include="TimeMgr.h">
+      <Filter>Engine\Manager\TimeMgr</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI_MetalSlug3.rc">
@@ -58,6 +67,9 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Core.cpp">
       <Filter>Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeMgr.cpp">
+      <Filter>Engine\Manager\TimeMgr</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
