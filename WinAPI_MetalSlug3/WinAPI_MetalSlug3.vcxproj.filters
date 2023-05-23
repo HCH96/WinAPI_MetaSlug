@@ -11,6 +11,12 @@
     <Filter Include="Engine">
       <UniqueIdentifier>{cb95fe90-9583-42b7-91b7-77291770b93b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Header">
+      <UniqueIdentifier>{b11ee178-f735-4a7f-ae8e-e08a18a1b617}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core">
+      <UniqueIdentifier>{15d9af28-5a08-4b6c-bd74-4805b0fb3c70}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -24,6 +30,15 @@
     </ClInclude>
     <ClInclude Include="WinAPI_MetalSlug3.h">
       <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Core.h">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>Engine\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="define.h">
+      <Filter>Engine\Header</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -41,5 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Core.cpp">
+      <Filter>Engine\Core</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
