@@ -10,6 +10,12 @@ private:
 	HDC			m_hDC;			// 메인 윈도우 DC
 	POINT		m_ptResolution; // 해상도
 
+	HDC			m_memDC;
+	HBITMAP		m_hBit;
+
+private:
+	void clear();
+
 public:
 	int init(HWND _hWnd, POINT _ptResolution);
 	void progress();
