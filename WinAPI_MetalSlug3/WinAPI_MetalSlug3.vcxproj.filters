@@ -26,6 +26,24 @@
     <Filter Include="Engine\Manager\KeyMgr">
       <UniqueIdentifier>{b26f4846-bb81-4ca5-9e55-b595883a8e1a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Object">
+      <UniqueIdentifier>{c4bd3812-90bc-49a1-b110-b33ecc4d9afc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scene">
+      <UniqueIdentifier>{b2b70501-c138-44b3-a202-a5c38eec7fde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Manager\SceneMgr">
+      <UniqueIdentifier>{65ea6c00-7625-469e-9b33-3573b47aad19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scene\Scene_Title">
+      <UniqueIdentifier>{e433e9ea-1010-4d25-ab05-ee1bf1bc5279}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Object\Player">
+      <UniqueIdentifier>{f584c473-84d6-4814-a676-186989b683ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scene\Scene_Play">
+      <UniqueIdentifier>{01b96556-1993-4ce4-b7a4-02037d51feb6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -55,6 +73,33 @@
     <ClInclude Include="KeyMgr.h">
       <Filter>Engine\Manager\KeyMgr</Filter>
     </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Engine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMgr.h">
+      <Filter>Engine\Manager\SceneMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="enums.h">
+      <Filter>Engine\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="struct.h">
+      <Filter>Engine\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Engine\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Engine\Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene_Title.h">
+      <Filter>Engine\Scene\Scene_Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene_Play.h">
+      <Filter>Engine\Scene\Scene_Play</Filter>
+    </ClInclude>
+    <ClInclude Include="func.h">
+      <Filter>Engine\Header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI_MetalSlug3.rc">
@@ -79,6 +124,27 @@
     </ClCompile>
     <ClCompile Include="KeyMgr.cpp">
       <Filter>Engine\Manager\KeyMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Engine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMgr.cpp">
+      <Filter>Engine\Manager\SceneMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Engine\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Engine\Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene_Title.cpp">
+      <Filter>Engine\Scene\Scene_Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene_Play.cpp">
+      <Filter>Engine\Scene\Scene_Play</Filter>
+    </ClCompile>
+    <ClCompile Include="func.cpp">
+      <Filter>Engine\Header</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

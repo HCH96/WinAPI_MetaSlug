@@ -3,6 +3,7 @@
 
 #include "TimeMgr.h"
 #include "KeyMgr.h"
+#include "SceneMgr.h"
 
 Core::Core()
 	: m_hWnd(0)
@@ -19,10 +20,6 @@ Core::~Core()
 	
 	DeleteDC(m_memDC);
 	DeleteObject(m_hBit);
-}
-
-void Core::clear()
-{
 }
 
 int Core::init(HWND _hWnd, POINT _ptResolution)
@@ -48,6 +45,8 @@ int Core::init(HWND _hWnd, POINT _ptResolution)
 	// Manager 초기화
 	TimeMgr::GetInst()->init();
 	KeyMgr::GetInst()->init();
+	SceneMgr::GetInst()->init();
+
 
 	return S_OK;
 }
@@ -60,20 +59,26 @@ void Core::progress()
 	TimeMgr::GetInst()->update();
 	KeyMgr::GetInst()->update();
 
+
+	// ============
+	// Scene update
+	// ============
+	SceneMgr::GetInst()->update();
+
+
 	// =========
 	// Rendering
 	// =========
-
-	clear();
-
 	TimeMgr::GetInst()->render(m_hWnd);
 
-
-	Rectangle(m_memDC, 100, 100, 200, 200);
-	Rectangle(m_memDC, 200, 200, 300, 300);
+	clear();
+	SceneMgr::GetInst()->render(m_memDC);
 	
-	// Back buffer에 있던 그림을 메인 buffer에 그린다.
 	BitBlt(m_hDC, 0, 0, m_ptResolution.x, m_ptResolution.y, m_memDC, 0, 0, SRCCOPY);
-
 	
+}
+
+void Core::clear()
+{
+	Rectangle(m_memDC, -1, -1, m_ptResolution.x + 1, m_ptResolution.y + 1);
 }
